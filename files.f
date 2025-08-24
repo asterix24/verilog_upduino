@@ -2,6 +2,7 @@
 
 # RTL
 src/top.v
+src/blink.v
 
 # Testbench
 sim/tb_top.v

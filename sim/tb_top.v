@@ -11,9 +11,8 @@ module tb_top;
   wire RGB0, RGB1, RGB2;
 
   // Istanza del DUT
-  top dut (
+  blink dut (
     .clk (clk),
-    .rst (rst),
     .RGB0(RGB0),
     .RGB1(RGB1),
     .RGB2(RGB2)
@@ -26,8 +25,6 @@ module tb_top;
     $dumpfile("tb_top.vcd");
     $dumpvars(0, tb_top);
 
-    repeat (4) @(posedge clk);
-    rst = 1'b1;
     repeat (2000) @(posedge clk);
     $finish;
   end
